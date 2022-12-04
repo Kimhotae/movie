@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>현재상영중인영화</title>
+    <meta name="description" content="현재 상영중인 영화정보" />
+    <metaname="keywords" content="영화, 현재상영중인영화, 메가박스, 롯데시네마, cgv, 팝콘, 영화예매" />
+    <meta name="author" content="Kimhotae" />
+    <metaname="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta propery="og:type" content="website" />
+    <meta property="og:title" content="현재상영중인영화" />
+    <metaproperty="og:description" content="현재 상영중인 영화정보제공 사이트입니다." />
+    <meta property="og:image" content="../static/img/favicon.png" />
+    <meta property="og:url" content="https://" />
+    <meta property="og:site_name" content="현재상영중인영화" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="현재상영중인영화" />
+    <meta name="twitter:description" content="현재 상영중인 영화정보제공 사이트입니다." />
+    <meta name="twitter:image" content="../static/img/favicon.png" />
+    <meta name=" twitter:url" content="https://" />
+    <meta name="twitter:creator" content="Kimhotae" />
+    <link rel="icon" href="../static/img/favicon.png" />
+    <link rel=" apple-touch-icon" href="../static/img/favicon.png" />
+    <link rel=" short icon" type="image/x-icon" href="../static/img/favicon.png" />
+    <link rel=" stylesheet" href="../static/css/nomalize.css" />
+    <script src="https://kit.fontawesome.com/3794aaa607.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet" />
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../static/css/detail.css" />
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div class="header-container">
+                <div class="header-font">
+                    <a href="https://www.lottecinema.co.kr/NLCHS">롯데시네마</a>
+                </div>
+                <div class="header-font">
+                    <a href="https://www.cgv.co.kr/">CGV</a>
+                </div>
+                <div class="header-font">
+                    <a href="https://www.megabox.co.kr/">메가박스</a>
+                </div>
+                <div class="header-font">
+                    <a href="https://www.cineq.co.kr/">씨네Q</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="inner">
+            <div class="text-container">
+                <div class="title-container">
+                    <div class="title">
+                        {{movieDetail[0]}}
+                    </div>
+                    <div class="engTitle">
+                        {{movieDetail[7]}}
+                    </div>
+                    <div class="detail-container">
+                        <div class="desc1">감독</div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="desc2">{{movieDetail[3]}}</div>
+                    </div>
+                    <div class="detail-container">
+                        <div class="desc1">출연진</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="desc2">{{movieDetail[4]}}</div>
+                    </div>
+                    <div class="detail-container">
+                        <div class="desc1">장르</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="desc2">{{movieDetail[6]}}</div>
+                        &nbsp;&nbsp;&nbsp;
+
+                        <div class="desc1">상영시간</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="desc2">{{movieDetail[2]}}분</div>
+                        &nbsp;&nbsp;&nbsp;
+
+                        <div class="desc1">국가</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="desc2">{{movieDetail[1]}}</div>
+                        &nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img src="../static/img/movieimg/{{searchMovie}}.jpg" class=movie-img" />
+                </div>
+            </div>
+            <div class="text-container2">
+
+            </div>
+            <div class="story-container">
+                <div class="title">
+                    줄거리
+                </div>
+                <div class="story">
+                    {{movieDetail[5]}}
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">영화정보제공 사이트입니다.</div>
+            <div class="footer-contact">문의 : kht08150@naver.com</div>
+            <div class="footer-contact">Copyright 2022 © All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
