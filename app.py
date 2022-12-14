@@ -64,8 +64,11 @@ for i in range(len(datas["boxOfficeResult"]["dailyBoxOfficeList"])):
     movies[0].append(datas["boxOfficeResult"]
                      ["dailyBoxOfficeList"][i]["movieNm"])
     opendb = datas["boxOfficeResult"]["dailyBoxOfficeList"][i]["openDt"]
-    opendb = int(''.join(list(filter(str.isdigit, opendb))))
-    movies[4].append(opendb)
+    if (opendb != " "):
+        opendb = int(''.join(list(filter(str.isdigit, opendb))))
+        movies[4].append(opendb)
+    else:
+        movies[4].append("%")
     movieAudiAcc.append(datas["boxOfficeResult"]
                         ["dailyBoxOfficeList"][i]["audiAcc"])
 
@@ -231,4 +234,4 @@ def detail(movieName):
 
 
 if __name__ == ("__main__"):
-    app.run(host="0.0.0.0", debug=False)
+    app.run()
